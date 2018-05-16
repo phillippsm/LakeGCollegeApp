@@ -9,5 +9,8 @@ class Clubs(models.Model):
     #club_attendees = models.CharField(max_length=50) #bd_column could work here if it's set out like that
     #club_time = models.CharField(max_length=None)
     #club_days = models.CharField(max_length=None)
+
+    # pretty printing
     def __str__(self):
         return self.club_name
+
