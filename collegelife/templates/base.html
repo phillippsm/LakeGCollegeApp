@@ -1,0 +1,25 @@
+{% load static %}<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>{% block title %}College Life{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/collegelife.css' %}">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+         <a class="collegelife-brand" href="{% url 'home' %}">College Life</a>
+      </div>
+    </nav>
+    <div class="container">
+      <ol class="breadcrumb my-4">
+         {% block breadcrumb %}
+         {% endblock %}
+      </ol>
+	{% block content %}
+	{% endblock %}
+    </div>
+  </body>
+</html>
+          
